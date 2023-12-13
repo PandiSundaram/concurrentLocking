@@ -70,4 +70,14 @@ public class EmployeeService {
         employeeRepo.save(employee);
 
     }
+
+    public Long findRecordusingName(String name,Long id){
+         employeeRepo.updatenamebyid(name,id);
+        return id;
+    }
+
+    public Employee findbyName(String name){
+        Employee e = employeeRepo.readdata(name);
+        return e;
+    }
 }
